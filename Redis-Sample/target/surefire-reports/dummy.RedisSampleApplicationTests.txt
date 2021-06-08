@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: dummy.RedisSampleApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.188 s <<< FAILURE! - in dummy.RedisSampleApplicationTests
+dummy.RedisSampleApplicationTests  Time elapsed: 0.186 s  <<< ERROR!
+java.lang.IllegalStateException: Configuration error: found multiple declarations of @BootstrapWith for test class [dummy.RedisSampleApplicationTests]: [@org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.context.SpringBootTestContextBootstrapper), @org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper)]
+
