@@ -7,10 +7,14 @@ import org.springframework.stereotype.Repository;
 
 import dummy.model.Transaction;
 
+/**
+ * 
+ * @author Sayantan
+ *
+ */
 @Repository
-public interface TransactionRepository extends CrudRepository<Transaction, Long> {
+public interface TransactionRepository extends CrudRepository<Transaction, String> {
 
-	List<Transaction> findByFromAccountId(Long fromAccountId);
-    List<Transaction> findByToAccountId(Long toAccountId);
+	List<Transaction> findByFromAccountId(String fromAccountId);
+    List<Transaction> findByToAccountId(String toAccountId);
 }
- 
