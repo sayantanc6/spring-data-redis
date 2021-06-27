@@ -8,9 +8,14 @@ import org.springframework.stereotype.Repository;
 import dummy.model.Account;
 import dummy.model.Customer;
 
+/**
+ * 
+ * @author Sayantan
+ *
+ */
 @Repository
-public interface CustomerRepository extends CrudRepository<Customer,Long> {
+public interface CustomerRepository extends CrudRepository<Customer,String> {
  
 	Customer findByExternalId(String externalId);
-    List<Account> findByAccountsId(Long id); 
+    List<Account> findByAccountsId(String id); 
 }
