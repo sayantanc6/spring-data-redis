@@ -15,6 +15,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Details of a Customer
+ * @author Sayantan
+ *
+ */
 @Data
 @AllArgsConstructor
 @RedisHash("customer")
@@ -24,15 +29,25 @@ public class Customer implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * id of a customer
+	 */
 	@SerializedName("id")
-	@Id private long id;
+	@Id private String id;
 	
+	/**
+	 * external id of a customer
+	 */
 	@SerializedName("externalId")
     @Indexed private String externalId;
-	
+	/**
+	 * name of a cutomer
+	 */
 	@SerializedName("name")
     private String name;
-	
+	/**
+	 * <code>List</code> of Accounts in a Customer
+	 */
 	@SerializedName("accounts")
     private List<Account> accounts = new ArrayList<>();
     
