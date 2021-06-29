@@ -21,7 +21,7 @@ public class Account implements Serializable{
 	
 	@Indexed
 	@SerializedName("id")
-	private long id;
+	private String id;
 	
 	@SerializedName("number")
     private String number;
