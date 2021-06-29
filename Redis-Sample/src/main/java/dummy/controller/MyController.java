@@ -20,6 +20,11 @@ import dummy.repo.RedisBatchRepository;
 import dummy.repo.TransactionRepository;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
+import io.swagger.v3.oas.annotations.servers.Server;
 
 /**
  *  This class is an API exposed to CRUD operation using Redis Server.
@@ -31,6 +36,7 @@ import io.swagger.annotations.ApiParam;
  * @see CustomerRepository
  * @see TransactionRepository
  */
+@OpenAPIDefinition(servers = { @Server(url = "http://localhost:8080") }, info = @Info(title = "Sample Spring Boot API", version = "v2", description = "A demo project using Spring Boot with Swagger-UI enabled", license = @License(name = "MIT License", url = "www.abc.com"), contact = @Contact(url = "www.abc.com", name = "Sayantan Chatterjee")))
 @RestController
 @RequestMapping("/api")
 public class MyController {
