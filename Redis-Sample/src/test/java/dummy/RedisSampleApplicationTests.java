@@ -51,8 +51,8 @@ class RedisSampleApplicationTests {
 	@SneakyThrows(Exception.class)
 	 void postcustomer_saveredis_httpstatusOK()  {
 		List<Account> acclist = new ArrayList<>(); 
-    	acclist.add(new Account(1367, "54000", 54));
-    	Customer customer = new Customer(2, "34", "abc", acclist);
+    	acclist.add(new Account("1367", "54000", 54));
+    	Customer customer = new Customer("2", "34", "abc", acclist);
     	mvc.perform(post("/addcustomer")
     		.accept(MediaType.APPLICATION_JSON_VALUE)
     		.content(gson.toJson(customer, Customer.class)))
@@ -63,8 +63,8 @@ class RedisSampleApplicationTests {
 	void redis_should_save() {
 		
 		List<Account> acclist = new ArrayList<>();
-    	acclist.add(new Account(1367, "54000", 54));
-    	Customer customer = new Customer(2, "34", "abc", acclist);
+    	acclist.add(new Account("1367", "54000", 54));
+    	Customer customer = new Customer("2", "34", "abc", acclist);
     	
 		repository.save(customer);
     	assertThat(repository.findByExternalId("34")).isNotNull();
